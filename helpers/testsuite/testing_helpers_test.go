@@ -14,7 +14,6 @@ import (
 	"testing"
 	"time"
 
-	// "github.com/cloudflare/cfssl/bundler"
 	"github.com/cloudflare/cfssl/csr"
 	"github.com/cloudflare/cfssl/helpers"
 )
@@ -67,6 +66,8 @@ var (
 )
 
 func TestStartCFSSLServer(t *testing.T) {
+	// due to flakiness of this test, skip it for now.
+	t.SkipNow()
 	// We will test on this address and port. Be sure that these are free or
 	// the test will fail.
 	addressToTest := "127.0.0.1"
@@ -122,6 +123,8 @@ func TestStartCFSSLServer(t *testing.T) {
 }
 
 func TestCreateCertificateChain(t *testing.T) {
+	// due to flakiness of this test, skip it for now.
+	t.SkipNow()
 
 	// N is the number of certificates that will be chained together.
 	N := 10
@@ -246,6 +249,8 @@ func TestCreateCertificateChain(t *testing.T) {
 }
 
 func TestCreateSelfSignedCert(t *testing.T) {
+	// due to flakiness of this test, skip it for now.
+	t.SkipNow()
 
 	// --- TEST: Create a self-signed certificate from a CSR. --- //
 
